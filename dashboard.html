@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Flutter Developer</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-mode" data-lang="ar">
+    <!-- Preloader -->
+    <div class="dashboard-preloader">
+        <div class="dashboard-loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">جاري تحميل البيانات...</div>
+        </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="dashboard-sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <div class="logo-icon">
+                    <i class="fab fa-flutter"></i>
+                </div>
+                <h2>فلتر ديف</h2>
+            </div>
+            <button class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-menu">
+            <div class="menu-section">
+                <h3 class="section-title">القائمة الرئيسية</h3>
+                <ul class="menu-list">
+                    <li class="menu-item active">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-home"></i>
+                            <span>الرئيسية</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>الإحصائيات</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>المشاريع</span>
+                            <span class="menu-badge">5</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-users"></i>
+                            <span>العملاء</span>
+                            <span class="menu-badge">12</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-wallet"></i>
+                            <span>المبيعات</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="menu-section">
+                <h3 class="section-title">الأدوات</h3>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-cog"></i>
+                            <span>الإعدادات</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-bell"></i>
+                            <span>الإشعارات</span>
+                            <span class="menu-badge notification-badge">3</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="#" class="menu-link">
+                            <i class="fas fa-chart-line"></i>
+                            <span>التقارير</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="sidebar-footer">
+            <div class="user-profile">
+                <div class="user-avatar">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" alt="كريم مصطفى">
+                </div>
+                <div class="user-info">
+                    <h4>كريم مصطفى</h4>
+                    <span>Flutter Developer</span>
+                </div>
+                <button class="user-menu">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <h1 class="page-title">لوحة التحكم</h1>
+                <div class="breadcrumb">
+                    <span>الرئيسية</span>
+                    <i class="fas fa-chevron-left"></i>
+                    <span class="active">لوحة التحكم</span>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="header-controls">
+                    <div class="control-group">
+                        <div class="toggle-container lang-toggle">
+                            <button class="toggle-btn active" data-lang="ar">
+                                <i class="fas fa-language"></i>
+                                <span>العربية</span>
+                            </button>
+                            <button class="toggle-btn" data-lang="en">
+                                <i class="fas fa-language"></i>
+                                <span>English</span>
+                            </button>
+                        </div>
+
+                        <div class="toggle-container theme-toggle">
+                            <button class="toggle-btn active" data-theme="light">
+                                <i class="fas fa-sun"></i>
+                            </button>
+                            <button class="toggle-btn" data-theme="dark">
+                                <i class="fas fa-moon"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="بحث...">
+                    </div>
+
+                    <div class="header-actions">
+                        <button class="action-btn notification-btn">
+                            <i class="fas fa-bell"></i>
+                            <span class="notification-count">3</span>
+                        </button>
+                        <button class="action-btn message-btn">
+                            <i class="fas fa-envelope"></i>
+                            <span class="message-count">5</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" data-count="25">0</h3>
+                        <p class="stat-label">المشاريع المكتملة</p>
+                        <div class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>12% زيادة</span>
+                        </div>
+                    </div>
+                    <div class="stat-chart mini-chart">
+                        <canvas id="projectsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" data-count="15">0</h3>
+                        <p class="stat-label">عملاء راضون</p>
+                        <div class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>8% زيادة</span>
+                        </div>
+                    </div>
+                    <div class="stat-chart mini-chart">
+                        <canvas id="clientsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" data-count="50">0</h3>
+                        <p class="stat-label">ألف دولار أرباح</p>
+                        <div class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>15% زيادة</span>
+                        </div>
+                    </div>
+                    <div class="stat-chart mini-chart">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-value" data-count="98">0</h3>
+                        <p class="stat-label">% رضا العملاء</p>
+                        <div class="stat-trend positive">
+                            <i class="fas fa-arrow-up"></i>
+                            <span>5% زيادة</span>
+                        </div>
+                    </div>
+                    <div class="stat-chart mini-chart">
+                        <canvas id="satisfactionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <div class="charts-grid">
+                <div class="chart-card large">
+                    <div class="chart-header">
+                        <h3>إحصائيات المشاريع</h3>
+                        <div class="chart-actions">
+                            <select class="chart-filter">
+                                <option>آخر 7 أيام</option>
+                                <option>آخر 30 يوم</option>
+                                <option>آخر 3 أشهر</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="projectsStatsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>توزيع المهارات</h3>
+                        <div class="chart-actions">
+                            <button class="chart-action-btn">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="skillsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recent Projects -->
+        <section class="projects-section">
+            <div class="section-header">
+                <h2>أحدث المشاريع</h2>
+                <a href="#" class="view-all">عرض الكل</a>
+            </div>
+
+            <div class="projects-table">
+                <div class="table-header">
+                    <div class="table-row">
+                        <div class="table-cell">اسم المشروع</div>
+                        <div class="table-cell">الحالة</div>
+                        <div class="table-cell">التقدم</div>
+                        <div class="table-cell">تاريخ البدء</div>
+                        <div class="table-cell">الإجراءات</div>
+                    </div>
+                </div>
+
+                <div class="table-body">
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="project-info">
+                                <div class="project-icon">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <div class="project-details">
+                                    <h4>تطبيق متجر إلكتروني</h4>
+                                    <span>Flutter, Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="status-badge completed">مكتمل</span>
+                        </div>
+                        <div class="table-cell">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%"></div>
+                            </div>
+                            <span class="progress-text">100%</span>
+                        </div>
+                        <div class="table-cell">15 يناير 2024</div>
+                        <div class="table-cell">
+                            <div class="action-buttons">
+                                <button class="action-btn view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="project-info">
+                                <div class="project-icon">
+                                    <i class="fas fa-heartbeat"></i>
+                                </div>
+                                <div class="project-details">
+                                    <h4>تطبيق طبي</h4>
+                                    <span>Flutter, Node.js</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="status-badge in-progress">قيد التطوير</span>
+                        </div>
+                        <div class="table-cell">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-text">75%</span>
+                        </div>
+                        <div class="table-cell">10 فبراير 2024</div>
+                        <div class="table-cell">
+                            <div class="action-buttons">
+                                <button class="action-btn view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="table-row">
+                        <div class="table-cell">
+                            <div class="project-info">
+                                <div class="project-icon">
+                                    <i class="fas fa-utensils"></i>
+                                </div>
+                                <div class="project-details">
+                                    <h4>تطبيق توصيل طعام</h4>
+                                    <span>Flutter, Google Maps</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-cell">
+                            <span class="status-badge pending">في الانتظار</span>
+                        </div>
+                        <div class="table-cell">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                            <span class="progress-text">30%</span>
+                        </div>
+                        <div class="table-cell">1 مارس 2024</div>
+                        <div class="table-cell">
+                            <div class="action-buttons">
+                                <button class="action-btn view-btn">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                                <button class="action-btn edit-btn">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Activity Feed -->
+        <section class="activity-section">
+            <div class="activity-grid">
+                <div class="activity-card">
+                    <div class="card-header">
+                        <h3>النشاط الحديث</h3>
+                        <button class="refresh-btn">
+                            <i class="fas fa-sync-alt"></i>
+                        </button>
+                    </div>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>تم إكمال مشروع المتجر الإلكتروني</p>
+                                <span>منذ ساعتين</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon primary">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>بدء تطوير واجهة جديدة للتطبيق الطبي</p>
+                                <span>منذ 5 ساعات</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon warning">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>يتطلب تحديث مكتبات Flutter</p>
+                                <span>منذ يوم واحد</span>
+                            </div>
+                        </div>
+
+                        <div class="activity-item">
+                            <div class="activity-icon info">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <div class="activity-content">
+                                <p>تعليق جديد من العميل على مشروع توصيل الطعام</p>
+                                <span>منذ يومين</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions-card">
+                    <div class="card-header">
+                        <h3>إجراءات سريعة</h3>
+                    </div>
+                    <div class="quick-actions">
+                        <button class="quick-action-btn">
+                            <i class="fas fa-plus"></i>
+                            <span>مشروع جديد</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-chart-line"></i>
+                            <span>تقرير أداء</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-cog"></i>
+                            <span>الإعدادات</span>
+                        </button>
+                        <button class="quick-action-btn">
+                            <i class="fas fa-download"></i>
+                            <span>تصدير بيانات</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
