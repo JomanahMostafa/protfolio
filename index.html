@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بورتفوليو مهندس Flutter | Flutter Dev</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body class="light-mode" data-lang="ar">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">جاري التحميل...</div>
+        </div>
+    </div>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="float-circle circle-1"></div>
+        <div class="float-circle circle-2"></div>
+        <div class="float-circle circle-3"></div>
+        <div class="float-square square-1"></div>
+        <div class="float-square square-2"></div>
+    </div>
+
+    <!-- شريط التنقل -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h2 class="logo-text">فلتر ديف</h2>
+            </div>
+
+            <div class="nav-menu">
+                <a href="#home" class="nav-link" data-key="home">الرئيسية</a>
+                <a href="#about" class="nav-link" data-key="about">عنّي</a>
+                <a href="#skills" class="nav-link" data-key="skills">المهارات</a>
+                <a href="#projects" class="nav-link" data-key="projects">المشاريع</a>
+                <a href="#contact" class="nav-link" data-key="contact">اتصل بي</a>
+
+                <div class="nav-controls">
+                    <div class="toggle-container lang-toggle">
+                        <button class="toggle-btn active" data-lang="ar">
+                            <i class="fas fa-language"></i>
+                            <span>العربية</span>
+                        </button>
+                        <button class="toggle-btn" data-lang="en">
+                            <i class="fas fa-language"></i>
+                            <span>English</span>
+                        </button>
+                    </div>
+
+                    <div class="toggle-container theme-toggle">
+                        <button class="toggle-btn active" data-theme="light">
+                            <i class="fas fa-sun"></i>
+                        </button>
+                        <button class="toggle-btn" data-theme="dark">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="profile-image-container">
+                <div class="profile-image">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face" alt="Flutter Developer" />
+                </div>
+            </div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-text" data-key="welcome">مرحباً بك في بورتفولي</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span data-key="iam">أنا</span>
+                        <span class="gradient-text" data-key="name">كريم مصطفى</span>
+                    </h1>
+                    <h2 class="hero-subtitle" data-key="title">مهندس Flutter محترف</h2>
+                    <p class="hero-description" data-key="heroDesc">
+                        أقوم بتطوير تطبيقات جوال مبتكرة باستخدام Flutter، مع التركيز على تجربة المستخدم المتميزة والأداء العالي. أحب تحويل الأفكار إلى واقع ملموس.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary" data-key="viewProjects">
+                            <span>عرض المشاريع</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary" data-key="contactMe">
+                            <span>تواصل معي</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-count="25">0</h3>
+                            <p class="stat-text" data-key="projectsCompleted">مشروع مكتمل</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-count="3">0</h3>
+                            <p class="stat-text" data-key="yearsExperience">سنوات خبرة</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-count="15">0</h3>
+                            <p class="stat-text" data-key="happyClients">عميل راضٍ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="image-container">
+                        <div class="main-image">
+                            <div class="code-window">
+                                <div class="window-header">
+                                    <div class="window-dots">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <span class="window-title">main.dart</span>
+                                </div>
+                                <div class="code-content">
+                                    <pre><code class="dart-code">
+class MyPortfolio extends StatelessWidget {
+    @override
+    Widget build(BuildContext context) {
+    return MaterialApp(
+        title: 'Flutter Developer',
+        theme: ThemeData(
+        primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
+        ),
+        home: PortfolioHome(),
+    );
+    }
+}
+                                    </code></pre>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-card card-1">
+                            <i class="fab fa-flutter"></i>
+                            <span>Flutter</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Mobile</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-rocket"></i>
+                            <span>Fast</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عني -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="aboutTitle">عنّي</h2>
+                <p class="section-subtitle" data-key="aboutSubtitle">تعرف على المزيد عن رحلتي وخبراتي</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <div class="profile-image"></div>
+                        <div class="image-overlay">
+                            <div class="experience-badge">
+                                <span class="exp-years">3+</span>
+                                <span class="exp-text" data-key="yearsExp">سنوات خبرة</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <div class="about-bio">
+                        <h3 data-key="aboutBioTitle">مرحباً، أنا كريم</h3>
+                        <p data-key="aboutBio1">
+                            مهندس Flutter محترف مع أكثر من 3 سنوات من الخبرة في تطوير تطبيقات الجوال. لدي شغف كبير بإنشاء تطبيقات جميلة وعملية تلبي احتياجات المستخدمين.
+                        </p>
+                        <p data-key="aboutBio2">
+                            متخصص في تطوير تطبيقات iOS و Android باستخدام Flutter، مع التركيز على واجهات المستخدم التفاعلية وتجربة المستخدم المتميزة والأداء العالي.
+                        </p>
+                    </div>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4 data-key="feature1Title">تطبيقات سريعة</h4>
+                                <p data-key="feature1Desc">أداء عالي وتجربة مستخدم سلسة</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-paint-brush"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4 data-key="feature2Title">تصميم حديث</h4>
+                                <p data-key="feature2Desc">واجهات مستخدم جذابة وعصرية</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4 data-key="feature3Title">كود نظيف</h4>
+                                <p data-key="feature3Desc">هيكلة برمجية محترفة وقابلة للصيانة</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المهارات -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="skillsTitle">المهارات</h2>
+                <p class="section-subtitle" data-key="skillsSubtitle">المهارات والتقنيات التي أتقنها</p>
+            </div>
+
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3 class="category-title" data-key="techSkills">المهارات التقنية</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="95">
+                            <div class="skill-header">
+                                <div class="skill-info">
+                                    <span class="skill-name">Flutter</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-header">
+                                <div class="skill-info">
+                                    <span class="skill-name">Dart</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-header">
+                                <div class="skill-info">
+                                    <span class="skill-name">Firebase</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-category">
+                    <h3 class="category-title" data-key="uiSkills">واجهة المستخدم</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item" data-skill="90">
+                            <div class="skill-header">
+                                <div class="skill-info">
+                                    <span class="skill-name">Material Design</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-skill="85">
+                            <div class="skill-header">
+                                <div class="skill-info">
+                                    <span class="skill-name">Cupertino</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-skill="80">
+                            <div class="skill-header">
+                                <div class="skill-info">
+                                    <span class="skill-name">Animations</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المشاريع -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="projectsTitle">المشاريع</h2>
+                <p class="section-subtitle" data-key="projectsSubtitle">أحدث أعمالي وإنجازاتي</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-badge">Flutter</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-key="project1Title">تطبيق متجر إلكتروني</h3>
+                        <p class="project-description" data-key="project1Desc">
+                            تطبيق متجر شامل للتجارة الإلكترونية مع دفع آمن وإدارة طلبات.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Stripe</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-badge">Flutter</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-key="project2Title">تطبيق طبي</h3>
+                        <p class="project-description" data-key="project2Desc">
+                            تطبيق لحجز المواعيد الطبية وإدارة السجلات الصحية.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-badge">Flutter</div>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title" data-key="project3Title">تطبيق توصيل طعام</h3>
+                        <p class="project-description" data-key="project3Desc">
+                            تطبيق لتوصيل الطعام مع نظام تتبع حي للطلبات.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Google Maps</span>
+                            <span class="tech-tag">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بي -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-key="contactTitle">اتصل بي</h2>
+                <p class="section-subtitle" data-key="contactSubtitle">لنتحدث عن مشروعك القادم</p>
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 data-key="contactInfoTitle">لنتحدث عن مشروعك</h3>
+                    <p data-key="contactInfoDesc">
+                        أنا متاح دائمًا لمناقشة أفكار مشاريعك ومساعدتك في تحقيقها. لا تتردد في التواصل معي عبر أي من الوسائل التالية.
+                    </p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4 data-key="emailTitle">البريد الإلكتروني</h4>
+                                <span>mohamed@example.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4 data-key="phoneTitle">الهاتف</h4>
+                                <span>+20 123 456 7890</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-content">
+                                <h4 data-key="locationTitle">الموقع</h4>
+                                <span data-key="location">القاهرة، مصر</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder=" " required>
+                        <label data-key="namePlaceholder">الاسم الكامل</label>
+                        <span class="focus-border"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder=" " required>
+                        <label data-key="emailPlaceholder">البريد الإلكتروني</label>
+                        <span class="focus-border"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder=" " required>
+                        <label data-key="subjectPlaceholder">الموضوع</label>
+                        <span class="focus-border"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea placeholder=" " rows="5" required></textarea>
+                        <label data-key="messagePlaceholder">الرسالة</label>
+                        <span class="focus-border"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span data-key="sendMessage">إرسال الرسالة</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h2 class="logo-text">فلتر ديف</h2>
+                </div>
+
+                <p class="footer-text" data-key="footerText">
+                    مهندس Flutter محترف متخصص في تطوير تطبيقات الجوال المبتكرة والعصرية.
+                </p>
+
+                <div class="footer-links">
+                    <a href="#home" data-key="home">الرئيسية</a>
+                    <a href="#about" data-key="about">عنّي</a>
+                    <a href="#skills" data-key="skills">المهارات</a>
+                    <a href="#projects" data-key="projects">المشاريع</a>
+                    <a href="#contact" data-key="contact">اتصل بي</a>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>&copy; 2024 <span data-key="name">محمد أحمد</span>. <span data-key="allRights">جميع الحقوق محفوظة</span>.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر العودة للأعلى -->
+    <button class="scroll-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
